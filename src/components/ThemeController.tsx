@@ -1,6 +1,17 @@
+import { useRef } from 'react'
+
 const Navbar = () => {
+  const dropdown = useRef<HTMLDivElement>(null)
+
+  const handleClick = () => {
+    // Ensure dropdown closes after selection
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur()
+    }
+  }
+
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={dropdown}>
       <div tabIndex={0} role="button" className="btn m-1">
         Theme
         <svg
@@ -19,6 +30,7 @@ const Navbar = () => {
       >
         <li>
           <input
+            onClick={handleClick}
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
@@ -30,6 +42,7 @@ const Navbar = () => {
         <li>
           <input
             type="radio"
+            onClick={handleClick}
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Dark"
@@ -39,6 +52,7 @@ const Navbar = () => {
         </li>
         <li>
           <input
+            onClick={handleClick}
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
@@ -49,6 +63,7 @@ const Navbar = () => {
         </li>
         <li>
           <input
+            onClick={handleClick}
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
@@ -59,6 +74,7 @@ const Navbar = () => {
         </li>
         <li>
           <input
+            onClick={handleClick}
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
@@ -69,6 +85,7 @@ const Navbar = () => {
         </li>
         <li>
           <input
+            onClick={handleClick}
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
