@@ -1,18 +1,17 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { themeChange } from 'theme-change';
+import Navbar from './components/ThemeController';
 
 function App() {
+  useEffect(() => {
+    themeChange(false)
+     // 👆 false parameter is required for react project
+  }, [])
+
   return (
     <div className='App'>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://reactjs.org' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
+      <Navbar />
       <h1>Welcome to Page Paladin!</h1>
     </div>
   );
