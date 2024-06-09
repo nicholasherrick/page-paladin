@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">Page Paladin</a>
+        <a className="btn btn-ghost text-2xl font-black">Page Paladin</a>
       </div>
       <div className="navbar-end">
         <ThemeController />
