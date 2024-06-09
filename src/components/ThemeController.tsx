@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="dropdown mb-72">
+    <div className="dropdown">
       <div tabIndex={0} role="button" className="btn m-1">
         Theme
         <svg
@@ -44,6 +44,7 @@ const Navbar = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Retro"
             value="retro"
+            data-set-theme="retro"
           />
         </li>
         <li>
@@ -53,6 +54,7 @@ const Navbar = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Cyberpunk"
             value="cyberpunk"
+            data-set-theme="cyberpunk"
           />
         </li>
         <li>
@@ -62,6 +64,7 @@ const Navbar = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Valentine"
             value="valentine"
+            data-set-theme="valentine"
           />
         </li>
         <li>
@@ -71,6 +74,7 @@ const Navbar = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Aqua"
             value="aqua"
+            data-set-theme="aqua"
           />
         </li>
       </ul>

@@ -1,7 +1,7 @@
 import './App.css'
 import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
-import Navbar from './components/ThemeController'
+import Navbar from './components/Navbar'
 
 function App() {
   useEffect(() => {
@@ -11,8 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <h1>Welcome to Page Paladin!</h1>
+      <div className="container mx-auto px-4">
+        <Navbar />
+        <h1>Welcome to Page Paladin!</h1>
+      </div>
     </div>
   )
 }
